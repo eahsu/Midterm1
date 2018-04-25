@@ -6,14 +6,14 @@ using namespace std;
 // function (named assertEquals) returns void
 // void means nothing, means returning nothing
 void assertEquals(string expected, string actual, string message); 
-string starT(int width, int height); // declare a string function named starT, will return a STRING!
+string starT(int width, int height); 
 void runTests(void);
 
 string starT(int width, int height){
   string result = "";															// declare empty string named result
 	int numSpaces = width/2;												// declare integer that represents the number of spaces to add
 	
-	if(width < 2 || width%2 == 0 || height < 2){			// if these conditions are not fulfilled, return empty result string
+	if(width < 2 || width%2 == 0 || height < 2){						// if these conditions are not fulfilled, return empty result string
 		return result;
 	}
 	
