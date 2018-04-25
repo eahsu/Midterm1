@@ -9,14 +9,11 @@ void assertEquals(string expected, string actual, string message);
 string starT(int width, int height); // declare a string function named starT, will return a STRING!
 void runTests(void);
 
-// Write starT per specifictions in the lab writeup
-// so that internal tests pass, and submit.cs system tests pass
-
 string starT(int width, int height){
   string result = "";															// declare empty string named result
 	int numSpaces = width/2;												// declare integer that represents the number of spaces to add
 	
-	if(width < 2 || width%2 == 0 || height < 2){		// if these conditions are not fulfilled, return empty result string
+	if(width < 2 || width%2 == 0 || height < 2){			// if these conditions are not fulfilled, return empty result string
 		return result;
 	}
 	
