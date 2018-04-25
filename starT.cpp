@@ -12,16 +12,13 @@ void runTests(void);
 string starT(int width, int height){
   string result = "";															// declare empty string named result
 	int numSpaces = width/2;												// declare integer that represents the number of spaces to add
-	
 	if(width < 2 || width%2 == 0 || height < 2){						// if these conditions are not fulfilled, return empty result string
 		return result;
 	}
-	
 	for(int i = 0; i < width; i++){									// add the first row of *
 		result += "*";
 	}
 	result += "\n";																	// after first row, start working on other rows
-	
 	for(int i = 0; i < height-1; i++){							// start to print the other rows. height-1 because we printed first row already
 		for(int j = 0; j < numSpaces; j++){						// add the number of spaces to put * in the middle
 			result += " ";
@@ -32,7 +29,6 @@ string starT(int width, int height){
 		}
 		result += "\n";																// move onto the next line
 	}
-
 	return result;
 }
 
