@@ -100,15 +100,5 @@ int main(int argc, char *argv[]){
 
   cout << starT(width,height);
 
-  // TODO: Add check for parameters
-  // and code to print usage message
-
-  // TODO: Add code to get width and height from command line args
-  // code that checks if they are both -1; if so, call runTests()
-  // then exit.
-
-  // TODO: Add code that calls the starT function and prints
-  // the result on cout (without an extra newline)
-
   return 0;
 }
