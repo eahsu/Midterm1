@@ -7,44 +7,38 @@ void assertEquals(string expected, string actual, string message);
 string starZ(int width);
 void runTests(void);
 
-// Write starZ per specifictions at 
-// https://foo.cs.ucsb.edu/16wiki/index.php/F14:Labs:lab04
-// and so that internal tests pass, and submit.cs system tests pass
-
-
 string starZ(int width)
 {
   string result="";
-  // check if parameters are valid
   if (width < 3){
-    return result;  // return without printing anything
+    return result;  								// return without printing anything
   }
 
-	int height = width;									// height = width according to problem
+  int height = width;									// height = width according to problem
 	
-	for(int i = 0; i < width; i++){			// print out first line of *
-		result += "*";
-	}
-	result += "\n";
+  for(int i = 0; i < width; i++){						// print out first line of *
+    result += "*";
+  }
+  result += "\n";
 
 
-	for(int i = 0; i < height-2; i++){				// print out the slash (middle part of Z). Height - 2 
-		for(int j = height - 2 - i; j>0;j--){		// because we take out the top level and bottom level 
-			result += " ";												// print out this many spaces. Height - 2 because of no top and bottom and then - i
-		}																				// because reserve i spaces for * and spaces afterwards
-		result += "*";									// Print out single *
-		for(int j = 0; j<= i; j++){			// Print out rest of spaces to fill the line
-			result += " ";
-		}
-		result += "\n";									// Go to next line
-	}
+  for(int i = 0; i < height-2; i++){						// print out the slash (middle part of Z). Height - 2 
+    for(int j = height - 2 - i; j>0;j--){					// because we take out the top level and bottom level 
+      result += " ";												// print out this many spaces. Height - 2 because of no top and bottom and then - i
+    }																				// because reserve i spaces for * and spaces afterwards
+    result += "*";									// Print out single *
+    for(int j = 0; j<= i; j++){							// Print out rest of spaces to fill the line
+    result += " ";
+    }
+    result += "\n";									// Go to next line
+  }
 	
 	
-	for(int i = 0; i < width; i++){		// same as printing top layer
-		result += "*";
-	}
-	result += "\n";
-	return result;
+  for(int i = 0; i < width; i++){						// same as printing top layer
+    result += "*";
+  }
+  result += "\n";
+  return result;
 }
 
 // Test-Driven Development; check expected results against actual
