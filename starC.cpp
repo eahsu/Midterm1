@@ -7,23 +7,16 @@ void assertEquals(string expected, string actual, string message);
 string starC(int width, int height);
 void runTests(void);
 
-// Write starC per specifictions in the lab writeup
-// so that internal tests pass, and submit.cs system tests pass
-
-
 string starC(int width, int height){
   string result="";
 	int numSpaces = width-1;													// number of spaces = width - 1
-
   if(width < 2 || height < 3){											// check to make sure the inputs are valid
     return result;  																// return empty result string
   }
-
 	for(int i = 0; i < width; i++){
 		result += "*";																	// add first row of stars
 	}
 	result += "\n";
-	
 	for(int i = 0; i < height-2; i++){								// height-2 because we will print first line and last line
 		result += "*";
 		for(int j = 0; j < numSpaces; j++){							// add # of spaces
@@ -31,12 +24,10 @@ string starC(int width, int height){
 		}
 		result += "\n";
 	}
-	
 	for(int i = 0; i < width; i++){
 		result += "*";																	// add last row of stars
 	}
-	result += "\n";
-		
+	result += "\n";		
   return result;
 }
 
