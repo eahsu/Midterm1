@@ -85,16 +85,12 @@ int main(int argc, char *argv[]){
     cerr << "Usage: " << argv[0] << " width height" << endl;
     exit(1);
   }
-
   int width = atoi(argv[1]);
   int height = atoi(argv[2]);
-
   if (width==-1 && height==-1) {
     runTests();
     exit(2);
   }
-
   cout << starT(width,height);
-
   return 0;
 }
